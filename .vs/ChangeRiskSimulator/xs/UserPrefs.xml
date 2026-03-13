@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{C5B1496C-105B-4641-BB71-43D75CC90BFA}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ChangeRiskSimulator PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChangeRiskSimulator/Controllers/SimulationController.cs">
+    <Files>
+      <File FileName="ChangeRiskSimulator/WeatherForecast.cs" Line="14" Column="1" />
+      <File FileName="ChangeRiskSimulator/Program.cs" Line="20" Column="1" />
+      <File FileName="ChangeRiskSimulator/EmptyClass.cs" Line="18" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ChangeRiskSimulator" expanded="True">
+            <Node name="ChangeRiskSimulator" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

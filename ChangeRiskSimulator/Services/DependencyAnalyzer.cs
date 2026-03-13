@@ -5,9 +5,25 @@ namespace ChangeRiskSimulator.Services;
 
 public class DependencyAnalyzer : IRiskAnalyzer
 {
+    private static int CountBlastRadius(string resourceId)
+    {
+        if (!MockInfrastructure.Dependencies.TryGetValue(resourceId, out var deps))
+            return 0;
+
+        int total = 0;
+        foreach (var dep in deps)
+        {
+            total += 1;
+            total += CountBlastRadius(dep);
+        }
+        return total;
+    }
+
     public RiskSignal Analyze(ChangeRequest request)
     {
-        if (!MockInfrastructure.Dependencies.TryGetValue(request.ResourceId, out var deps))
+        int count = CountBlastRadius(request.ResourceId);
+
+        if (count == 0)
         {
             return new RiskSignal
             {
@@ -17,7 +33,6 @@ public class DependencyAnalyzer : IRiskAnalyzer
             };
         }
 
-        int count = deps.Count;
         int score = count switch
         {
             >= 3 => 25,
@@ -30,7 +45,7 @@ public class DependencyAnalyzer : IRiskAnalyzer
         {
             Name = "Dependency",
             Score = score,
-            Explanation = $"Resource has {count} dependent resource(s)."
+            Explanation = $"Blast radius: {count} affected resource(s) (direct + transitive)."
         };
     }
 }

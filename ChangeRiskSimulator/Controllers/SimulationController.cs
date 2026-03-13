@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using ChangeRiskSimulator.Domain;
 using ChangeRiskSimulator.Services;
 
@@ -19,7 +19,9 @@ public class SimulationController : ControllerBase
         {
             riskLevel = result.riskLevel,
             totalScore = result.totalScore,
-            signals = result.signals
+            signals = result.signals,
+            impactedResources = result.impactedResources,
+            graph = result.graph
         });
     }
 }

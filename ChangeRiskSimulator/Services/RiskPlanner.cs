@@ -8,20 +8,20 @@ public class RiskPlanner
     {
         var analyzers = new List<IRiskAnalyzer>();
 
+        analyzers.Add(new EnvironmentAnalyzer());
+
         if (request.ResourceType == "VirtualMachine")
         {
             analyzers.Add(new DependencyAnalyzer());
             analyzers.Add(new CapacityAnalyzer());
             analyzers.Add(new HistoricalAnalyzer());
         }
-
-        if (request.ResourceType == "NetworkSecurityGroup")
+        else if (request.ResourceType == "NetworkSecurityGroup")
         {
             analyzers.Add(new DependencyAnalyzer());
             analyzers.Add(new HistoricalAnalyzer());
         }
-
-        if (analyzers.Count == 0)
+        else
         {
             analyzers.Add(new HistoricalAnalyzer());
         }

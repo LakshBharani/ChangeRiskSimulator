@@ -5,8 +5,9 @@ namespace ChangeRiskSimulator.Services;
 public class RiskOrchestrator
 {
     private readonly RiskPlanner planner = new RiskPlanner();
+    private readonly DependencyGraphBuilder graphBuilder = new DependencyGraphBuilder();
 
-    public (string riskLevel, int totalScore, List<RiskSignal> signals) Evaluate(ChangeRequest request)
+    public (string riskLevel, int totalScore, List<RiskSignal> signals, List<string> impactedResources, DependencyGraph graph) Evaluate(ChangeRequest request)
     {
         var analyzers = planner.Plan(request);
 
@@ -26,6 +27,8 @@ public class RiskOrchestrator
             _ => "High"
         };
 
-        return (riskLevel, totalScore, signals);
+        var (graph, impactedResources) = graphBuilder.Build(request.ResourceId);
+
+        return (riskLevel, totalScore, signals, impactedResources, graph);
     }
 }

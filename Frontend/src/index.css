@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes dotted-edge-flow {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+.dotted-edge-wrapper path {
+  stroke-dasharray: 6 4;
+  animation: dotted-edge-flow 1.2s linear infinite;
+}
+
+.floating-edges .react-flow__handle {
+  opacity: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply antialiased bg-slate-950 text-slate-200;
+}

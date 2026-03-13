@@ -27,6 +27,7 @@
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/ref/ChangeRiskSimulator.dll
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/bin/Debug/net7.0/ChangeRiskSimulator.staticwebassets.endpoints.json
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/rpswa.dswa.cache.json
+/Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/ChangeRiskSimulator.sourcelink.json
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/rjimswa.dswa.cache.json
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/rjsmrazor.dswa.cache.json
 /Users/lakshbharani/Developer/cloudops/ChangeRiskSimulator/ChangeRiskSimulator/obj/Debug/net7.0/rjsmcshtml.dswa.cache.json

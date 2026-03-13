@@ -2,8 +2,9 @@ namespace ChangeRiskSimulator.Domain;
 
 public class ChangeRequest
 {
-    public string ResourceId { get; set; }
-    public string ResourceType { get; set; }
-    public string ChangeType { get; set; }
-    public string Region { get; set; }
+    public required string ResourceId { get; set; }
+    public required string ResourceType { get; set; }
+    public required string ChangeType { get; set; }
+    public required string Region { get; set; }
+    public required string Environment { get; set; }
 }
